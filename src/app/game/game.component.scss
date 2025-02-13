@@ -1,0 +1,15 @@
+@import "./../../styles.scss";
+
+.field {
+  @include fullSize();
+  background-image: url(./../../assets/img/tableTop.jpg);
+  @include dFlex();
+}
+
+.cardStack {
+    position: relative;
+  img {
+    position: absolute;
+    height: 30vh;
+  }
+}

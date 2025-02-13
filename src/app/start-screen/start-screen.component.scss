@@ -1,0 +1,34 @@
+@import "./../../styles.scss";
+
+.start-screen {
+  background-color: #404040;
+  @include fullSize();
+  @include dFlex();
+  div {
+    max-height: 100vh;
+    max-width: 100vw;
+    position: relative;
+    overflow: hidden;
+    img:first-of-type {
+      max-height: 100vh;
+      max-width: 100vw;
+    }
+    div {
+      position: absolute;
+      right: 0;
+      left: 0;
+      height: 8%;
+      bottom: 3%;
+      @include dFlex();
+      img {
+        width: auto;
+        height: 100%;
+        object-fit: cover;
+        &:hover {
+            filter: brightness(1.25);
+            cursor: pointer;
+        }
+      }
+    }
+  }
+}
