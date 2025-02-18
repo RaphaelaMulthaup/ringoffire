@@ -26,13 +26,13 @@ export class GameComponent implements OnInit {
     if (!this.pickCardAnimation) {
       const card = this.game.stack.pop();
       if (card !== undefined) {
-        this.currentCard = card;
-        console.log(this.currentCard);
+        this.currentCard = card;        
         this.pickCardAnimation = true;
 
         setTimeout(() => {
+          this.game.playedCards.push(this.currentCard);
           this.pickCardAnimation = false;
-        }, 1500);
+        }, 1000);
       } else {
         console.log('No more cards to take.');
       }
