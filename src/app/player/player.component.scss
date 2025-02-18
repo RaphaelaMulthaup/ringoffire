@@ -1,0 +1,15 @@
+@import "./../../styles.scss";
+
+.player {
+  @include dFlex($jc: flex-start, $g: 16px);
+  background-color: #f5d67a;
+  width: 300px;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  span {
+    font-size: 32px;
+  }
+  img {
+    border-radius: 50%;
+  }
+}

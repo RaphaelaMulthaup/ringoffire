@@ -6,6 +6,11 @@
   @include dFlex();
 }
 
+.playerPosition {
+  position: absolute;
+  right: 0;
+}
+
 .cardStack {
   position: relative;
   img {
@@ -24,7 +29,7 @@
 
 .pickCard {
   animation: pick-card-animation 1s ease-in-out;
-  transform: scale(1.3) translateX(140px) translateY(-180px) rotate(-10deg);
+  transform: scale(1.3) translateX(200px) translateY(-180px) rotate(-10deg);
 }
 
 @keyframes pick-card-animation {
@@ -38,11 +43,12 @@
     transform: scale(1.7);
   }
   100% {
-    transform: scale(1.3) translateX(140px) translateY(-180px) rotate(-10deg);
+    transform: scale(1.3) translateX(200px) translateY(-180px) rotate(-10deg);
   }
 }
 
 .playedCard {
   right: 20px;
-  transform: scale(1.3) translateX(140px) translateY(-180px) rotate(-10deg);
+  transform: scale(1.3) translateX(200px) translateY(-180px) rotate(-10deg);
 }
+
