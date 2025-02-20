@@ -2,7 +2,7 @@
 
 .player {
   @include dFlex($jc: flex-start, $g: 16px);
-  background-color: #f5d67a;
+  background-color: #e4e0d2;
   width: 300px;
   border-top-left-radius: 50px;
   border-bottom-left-radius: 50px;
@@ -11,5 +11,11 @@
   }
   img {
     border-radius: 50%;
+    height: 72px;
+    width: 72px;
   }
+}
+
+.player-acive{
+  background-color: #f5d67a;
 }
