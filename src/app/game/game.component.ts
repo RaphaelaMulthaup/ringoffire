@@ -24,7 +24,9 @@ export class GameComponent implements OnInit {
     const dialogRef = this.dialog.open(DialogAddPlayerComponent);
 
     dialogRef.afterClosed().subscribe((name: string) => {
-      this.game.players.push(name);
+      if (name !== undefined || '') {
+        this.game.players.push(name);
+      }
     });
   }
 
@@ -45,12 +47,11 @@ export class GameComponent implements OnInit {
           this.pickCardAnimation = false;
         }, 1000);
         if (this.game.currentPlayer < this.game.players.length - 1) {
-                  this.game.currentPlayer ++;
+          this.game.currentPlayer++;
         } else {
-          this.game.currentPlayer = 0; 
+          this.game.currentPlayer = 0;
         }
         console.log(this.game.players[this.game.currentPlayer]);
-        
       } else {
         console.log('No more cards to take.');
       }
