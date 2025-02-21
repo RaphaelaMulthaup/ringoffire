@@ -51,7 +51,6 @@ export class GameComponent implements OnInit {
         } else {
           this.game.currentPlayer = 0;
         }
-        console.log(this.game.players[this.game.currentPlayer]);
       } else {
         console.log('No more cards to take.');
       }

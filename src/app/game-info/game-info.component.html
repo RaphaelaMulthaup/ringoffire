@@ -1,9 +1,4 @@
-<mat-card appearance="outlined">
-  <mat-card-title>Titel</mat-card-title>
-  <mat-card-content
-    >Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta officiis
-    quos cum sed aut, ducimus voluptatum sequi officia consequatur
-    exercitationem eligendi repellendus incidunt dolorem eum quisquam, labore
-    itaque voluptate! Incidunt?</mat-card-content
-  >
+<mat-card appearance="outlined" [ngClass]="{'dNone': isHidden}">
+  <mat-card-title>{{title}}</mat-card-title>
+  <mat-card-content>{{description}}</mat-card-content>
 </mat-card>
