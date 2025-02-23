@@ -57,13 +57,11 @@ export class GameInfoComponent implements OnChanges {
   title: string = '';
   description: string = '';
   @Input() card!: string;
-  isHidden = true;
 
   ngOnChanges(): void {
 
     let index = parseInt(this.card.replace(/\D/g, ''), 10);
     if (!isNaN(index) && index > 0 && index <= this.cardAction.length) {
-      this.isHidden = false;
       this.title = this.cardAction[index - 1].title;
       this.description = this.cardAction[index - 1].description;
     }
